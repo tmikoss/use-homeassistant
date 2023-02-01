@@ -2,14 +2,21 @@
   "name": "use-homeassistant",
   "version": "0.0.1",
   "description": "Helpers for creating custom Homeassistant dashboards in React",
-  "main": "dist/esm/index.js",
+  "main": "./dist/cjs/index.js",
+  "module": "./dist/esm/index.js",
+  "types": "./dist/esm/index.d.ts",
   "scripts": {
-    "build": "tsc",
+    "build": "yarn build:esm && yarn build:cjs",
+    "build:esm": "tsc",
+    "build:cjs": "tsc --module commonjs --outDir dist/cjs",
     "dev": "tsc -w",
-    "lint": "eslint \"{**/*,*}.{js,ts,jsx,tsx}\""
+    "lint": "eslint \"{**/*,*}.{js,ts,jsx,tsx}\"",
+    "prepare": "npm run build",
+    "prepublishOnly": "npm run lint"
   },
   "keywords": [
-    "Homeassistant"
+    "homeassistant",
+    "react"
   ],
   "author": "tmikoss",
   "license": "MIT",
@@ -31,7 +38,12 @@
     "swr": "^2.0.3"
   },
   "peerDependencies": {
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0"
-  }
+    "react": ">= 17.0.0",
+    "react-dom": ">= 17.0.0"
+  },
+  "files": [
+    "dist",
+    "LICENSE",
+    "README.md"
+  ]
 }
