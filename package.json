@@ -10,7 +10,7 @@
     "build:esm": "tsc",
     "build:cjs": "tsc --module commonjs --outDir dist/cjs",
     "dev": "tsc -w",
-    "lint": "eslint \"{**/*,*}.{js,ts,jsx,tsx}\"",
+    "lint": "eslint \"src/{**/*,*}.{js,ts,jsx,tsx}\"",
     "prepare": "npm run build",
     "prepublishOnly": "npm run lint",
     "docs": "yarn run typedoc src/index.ts"

@@ -1,10 +1,12 @@
 # use-homeassistant
 
-Helpers and hooks for building Homeassistant custom dashboards in React. Originally extracted from a personal dashboard. Connects to the Homeassistant websocket API via https://github.com/home-assistant/home-assistant-js-websocket, and the Homeassistant REST API.
+Helpers and hooks for building Homeassistant custom dashboards in React. Originally extracted from a personal dashboard. Connects to the Homeassistant websocket API via [home-assistant-js-websocket](https://github.com/home-assistant/home-assistant-js-websocket), and the Homeassistant REST API.
 
-## Basic usage
+## Usage
 
 Wrap the components that require interaction with Homeassistant in a `HomeassistantProvider`, then use provided hooks to fetch data.
+
+More in-depth [documentation is available here](https://tmikoss.github.io/use-homeassistant/).
 
 ```js
 import { HomeassistantProvider, useEntity } from 'use-homeassistant'
