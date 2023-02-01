@@ -21,7 +21,7 @@ const Lightbulb = ({ entityId }) => {
 
   return <div>
     The light with HA name {friendly_name} is currently {state}.
-    <button onClick={() => toggleLight(entityId, state === 'on' ? false : true)}>
+    <button onClick={() => toggleLight(entityId, state === 'on' ? false : true)}>Change that!</button>
   </div>
 }
 
