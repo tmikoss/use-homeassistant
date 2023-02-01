@@ -9,7 +9,7 @@ Wrap the components that require interaction with Homeassistant in a `Homeassist
 More in-depth [documentation is available here](https://tmikoss.github.io/use-homeassistant/).
 
 ```js
-import { HomeassistantProvider, useEntity } from 'use-homeassistant'
+import { HomeassistantProvider, useEntity, useToggleLight } from 'use-homeassistant'
 
 const url = 'http://homeassistant.local:8123'
 const token = '...' // https://developers.home-assistant.io/docs/auth_api/#long-lived-access-token
