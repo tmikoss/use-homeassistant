@@ -14,17 +14,20 @@ import { HomeassistantProvider, useEntity } from 'use-homeassistant'
 const url = 'http://homeassistant.local:8123'
 const token = '...' // https://developers.home-assistant.io/docs/auth_api/#long-lived-access-token
 
-const Lightbulb = () => {
-  const { state, attributes: { friendly_name } } = useEntity('entity.example_light')
+const Lightbulb = ({ entityId }) => {
+  const toggleLight = useToggleLight()
+
+  const { state, attributes: { friendly_name } } = useEntity(entityId)
 
   return <div>
-    The light with HA name {friendly_name} is currently {state}
+    The light with HA name {friendly_name} is currently {state}.
+    <button onClick={() => toggleLight(entityId, state === 'on' ? false : true)}>
   </div>
 }
 
 const App = () => {
   return <HomeassistantProvider homeassistantUrl={url} accessToken={token}>
-    <Lightbulb>
+    <Lightbulb entityId='entity.example_light'>
   </HomeassistantProvider>
 }
 ```
