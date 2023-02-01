@@ -1,7 +1,7 @@
 import { callService } from 'home-assistant-js-websocket'
 import { useCallback, useContext, useMemo } from 'react'
 import useSWR from 'swr'
-import { TCalendarEvent, THomeassistantEntity, TRestApiOptions } from './interfaces'
+import { TCalendarEvent, THomeassistantEntity, TRestApiOptions } from './types'
 import { HomeassistantContext } from './provider'
 
 export const useHomeassistant = () => useContext(HomeassistantContext)

@@ -12,7 +12,8 @@
     "dev": "tsc -w",
     "lint": "eslint \"{**/*,*}.{js,ts,jsx,tsx}\"",
     "prepare": "npm run build",
-    "prepublishOnly": "npm run lint"
+    "prepublishOnly": "npm run lint",
+    "docs": "yarn run typedoc src/index.ts"
   },
   "keywords": [
     "homeassistant",
@@ -31,6 +32,7 @@
     "eslint-plugin-react-hooks": "^4.6.0",
     "prettier": "^2.8.3",
     "tslib": "^2.5.0",
+    "typedoc": "^0.23.24",
     "typescript": "^4.9.4"
   },
   "dependencies": {

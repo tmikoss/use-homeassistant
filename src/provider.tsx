@@ -1,8 +1,8 @@
 import React, { createContext, ReactNode, useEffect, useState } from 'react'
 import { createConnection, createLongLivedTokenAuth, subscribeEntities } from 'home-assistant-js-websocket'
-import { IHomeassistantContext } from './interfaces'
+import { THomeassistantContext } from './types'
 
-export const HomeassistantContext = createContext<IHomeassistantContext>({
+export const HomeassistantContext = createContext<THomeassistantContext>({
   entities: {},
   homeassistantUrl: '',
   accessToken: ''
@@ -19,8 +19,8 @@ export const HomeassistantProvider = ({
   children: ReactNode
   fallback?: ReactNode
 }) => {
-  const [connection, setConnection] = useState<IHomeassistantContext['connection']>()
-  const [entities, setEntities] = useState<IHomeassistantContext['entities']>({})
+  const [connection, setConnection] = useState<THomeassistantContext['connection']>()
+  const [entities, setEntities] = useState<THomeassistantContext['entities']>({})
   const [firstLoadCompleted, setFirstLoadCompleted] = useState(false)
 
   useEffect(() => {

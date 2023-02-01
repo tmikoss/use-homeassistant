@@ -1,7 +1,7 @@
 import { Connection, HassEntities, HassEntity } from 'home-assistant-js-websocket'
 import { BareFetcher, PublicConfiguration } from 'swr/_internal'
 
-export interface IHomeassistantContext {
+export type THomeassistantContext = {
   entities: HassEntities
   connection?: Connection
   homeassistantUrl: string
