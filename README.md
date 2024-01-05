@@ -1,3 +1,7 @@
+# DEPRECATED & NOT MAINTAINED
+
+You probably want to use https://github.com/shannonhochkins/ha-component-kit - I'm switching to that in my own setup
+
 # use-homeassistant
 
 Helpers and hooks for building Homeassistant custom dashboards in React. Originally extracted from a personal dashboard. Connects to the Homeassistant websocket API via [home-assistant-js-websocket](https://github.com/home-assistant/home-assistant-js-websocket), and the Homeassistant REST API.
